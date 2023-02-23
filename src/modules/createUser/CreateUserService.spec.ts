@@ -3,6 +3,10 @@ import { UsersRepositoryInMemory } from "../../repositories/in-memory/UsersRepos
 import { IUsersRepository } from "../../repositories/IUsersRepositories";
 import { CreateUserService } from "./CreateUserService";
 
+//Executa uma função antes de qualquer um dos testes neste arquivo ser executado. 
+//Se a função retornar uma promise ou for um generator, 
+//o Jest vai esperar até que ela esteja resolvida para executar os testes.
+
 describe("Create user", () => {
   let usersRepository: IUsersRepository;
   let createUserService: CreateUserService;
@@ -21,7 +25,9 @@ describe("Create user", () => {
 
     const user = await createUserService.execute(userData);
 
+    //toHaveProperty para verificar se a propriedade fornecida na referência keyPath existe para um objeto.
     expect(user).toHaveProperty("id");
+    //toBe serve para validar um valor
     expect(user.username).toBe("testusername");
   });
 
