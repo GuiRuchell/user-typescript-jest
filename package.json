@@ -12,7 +12,8 @@
   },
   "scripts": {
     "dev": "ts-node-dev --exit-child src/server.ts",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@prisma/client": "^2.26.0",

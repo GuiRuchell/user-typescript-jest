@@ -6,6 +6,7 @@ import { CreateUserService } from "./CreateUserService";
 //Executa uma função antes de qualquer um dos testes neste arquivo ser executado. 
 //Se a função retornar uma promise ou for um generator, 
 //o Jest vai esperar até que ela esteja resolvida para executar os testes.
+//Comando para ver a cobertura dos testes npm run test:coverage
 
 describe("Create user", () => {
   let usersRepository: IUsersRepository;
